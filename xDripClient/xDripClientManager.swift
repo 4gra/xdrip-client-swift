@@ -13,6 +13,35 @@ import Combine
 
 public class xDripClientManager: CGMManager {
     
+    
+    public var glucoseDisplay: GlucoseDisplayable? {
+        if let glucose = latestBackfill {
+            return glucose
+        }
+        return nil
+        
+    }
+    
+    public var cgmStatus: CGMManagerStatus {
+        //TODO to finalize
+        return CGMManagerStatus(hasValidSensorSession: true)
+    }
+    
+    
+    
+    public func acknowledgeAlert(alertIdentifier: Alert.AlertIdentifier) {
+        
+    }
+    
+    public func getSoundBaseURL() -> URL? {
+        return nil
+    }
+    
+    public func getSounds() -> [Alert.Sound] {
+        return []
+    }
+    
+    
     public static var managerIdentifier = "xDripClient"
 
     public init() {
@@ -69,9 +98,9 @@ public class xDripClientManager: CGMManager {
     
     private var requestReceiver: Cancellable?
 
-    public var sensorState: SensorDisplayable? {
-        return latestBackfill
-    }
+//    public var sensorState: SensorDisplayable? {
+//        return latestBackfill
+//    }
 
     public let managedDataInterval: TimeInterval? = nil
     
@@ -90,7 +119,7 @@ public class xDripClientManager: CGMManager {
     
        
     
-    public func fetchNewDataIfNeeded(_ completion: @escaping (CGMResult) -> Void) {
+    public func fetchNewDataIfNeeded(_ completion: @escaping (CGMReadingResult) -> Void) {
         
         
         
@@ -192,7 +221,7 @@ public class xDripClientManager: CGMManager {
                 let newGlucose = filteredGlucose.filterDateRange(startDate, nil)
                 
                 let newSamples = newGlucose.filter({ $0.isStateValid }).map {
-                    return NewGlucoseSample(date: $0.startDate, quantity: $0.quantity, isDisplayOnly: false, syncIdentifier: "\(Int($0.startDate.timeIntervalSince1970))", device: self.device)
+                    return NewGlucoseSample(date: $0.startDate, quantity: $0.quantity, isDisplayOnly: false, wasUserEntered: false, syncIdentifier: "\(Int($0.startDate.timeIntervalSince1970))", device: self.device)
                 }
                 
                 
@@ -252,7 +281,7 @@ public class xDripClientManager: CGMManager {
             self.fetchNewDataIfNeeded { result in
                 guard case .newData = result else { return }
                 self.delegate.notify { delegate in
-                    delegate?.cgmManager(self, didUpdateWith: result)
+                    delegate?.cgmManager(self, hasNew: result)
                 }
             }
         }

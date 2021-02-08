@@ -28,7 +28,12 @@ extension Glucose: GlucoseValue {
 }
 
 
-extension Glucose: SensorDisplayable {
+extension Glucose: GlucoseDisplayable {
+    public var glucoseRangeCategory: GlucoseRangeCategory? {
+        return nil
+    }
+    
+    
     public var isStateValid: Bool {
         return ( ( glucose >= 39 ) && ( glucose <= 500 ) )
     }
@@ -42,12 +47,12 @@ extension Glucose: SensorDisplayable {
     }
 }
 
-extension SensorDisplayable {
-    public var stateDescription: String {
-        if isStateValid {
-            return LocalizedString("OK", comment: "Sensor state description for the valid state")
-        } else {
-            return LocalizedString("Needs Attention", comment: "Sensor state description for the non-valid state")
-        }
-    }
-}
+//extension SensorDisplayable {
+//    public var stateDescription: String {
+//        if isStateValid {
+//            return LocalizedString("OK", comment: "Sensor state description for the valid state")
+//        } else {
+//            return LocalizedString("Needs Attention", comment: "Sensor state description for the non-valid state")
+//        }
+//    }
+//}

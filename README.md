@@ -1,3 +1,7 @@
+<h1>Changes in this repo</h1>
+<p>This repo is modified to be compliance with the plugin approach available in the Loop Dev (Tidepool version). 
+
+
 <h1>Build</h1>
 <p>This guide will help you integrating JohanDegraeve's xdripswift (https://github.com/JohanDegraeve/xdripswift) into Loop.</p> 
 

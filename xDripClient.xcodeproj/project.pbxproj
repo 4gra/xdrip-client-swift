@@ -59,6 +59,8 @@
 		43AB5127213315D300B3D58D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43AB5125213315D300B3D58D /* Localizable.strings */; };
 		43AB51362133177800B3D58D /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB51352133177800B3D58D /* LocalizedString.swift */; };
 		43AB51372133177800B3D58D /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB51352133177800B3D58D /* LocalizedString.swift */; };
+		CE95D36125D1362B00FE161C /* xDripClientPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = CE95D35F25D1362B00FE161C /* xDripClientPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE95D36F25D13B3600FE161C /* xDripClientPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95D35425D135D200FE161C /* xDripClientPlugin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,20 @@
 			remoteGlobalIDString = 432B0E871CDFC3C50045347B;
 			remoteInfo = SpikeClient;
 		};
+		CE95D38225D13EC100FE161C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 432B0E7F1CDFC3C50045347B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43A8EC81210E664300A81379;
+			remoteInfo = xDripClientUI;
+		};
+		CE95D38425D13EC900FE161C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 432B0E7F1CDFC3C50045347B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 432B0E871CDFC3C50045347B;
+			remoteInfo = xDripClient;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -98,6 +114,16 @@
 				0A2ADE46243B8051008F5932 /* LoopKitUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE95D1EE25D1230500FE161C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -170,6 +196,13 @@
 		43AB51302133161A00B3D58D /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		43AB51352133177800B3D58D /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 		43C418AE1CE0488900405B6A /* xDripClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xDripClient.swift; sourceTree = "<group>"; };
+		CE95D1DE25D1230200FE161C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		CE95D1E025D1230200FE161C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		CE95D32A25D12E0D00FE161C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE95D35425D135D200FE161C /* xDripClientPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xDripClientPlugin.swift; sourceTree = "<group>"; };
+		CE95D35525D135D200FE161C /* xDripClientPlugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "xDripClientPlugin-Bridging-Header.h"; sourceTree = "<group>"; };
+		CE95D35D25D1362B00FE161C /* xDripClientPlugin.loopplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = xDripClientPlugin.loopplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE95D35F25D1362B00FE161C /* xDripClientPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xDripClientPlugin.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +245,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE95D35A25D1362B00FE161C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -247,6 +287,8 @@
 				432B0E961CDFC3C50045347B /* xDripClientTests */,
 				43A8EC83210E664300A81379 /* xDripClientUI */,
 				0A9FF6F6243B78D3007A7DB3 /* TestApp */,
+				CE95D32625D12E0900FE161C /* Shared */,
+				CE95D35E25D1362B00FE161C /* xDripClientPlugin */,
 				432B0E891CDFC3C50045347B /* Products */,
 				43A8EC7A210E661300A81379 /* Frameworks */,
 			);
@@ -259,6 +301,7 @@
 				432B0E921CDFC3C50045347B /* xDripClientTests.xctest */,
 				43A8EC82210E664300A81379 /* xDripClientUI.framework */,
 				0A9FF6F5243B78D3007A7DB3 /* TestApp.app */,
+				CE95D35D25D1362B00FE161C /* xDripClientPlugin.loopplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -294,6 +337,8 @@
 				43A8EC94210E67B000A81379 /* HealthKit.framework */,
 				43A8EC8B210E665600A81379 /* LoopKitUI.framework */,
 				43A8EC7B210E661400A81379 /* LoopKit.framework */,
+				CE95D1DE25D1230200FE161C /* WidgetKit.framework */,
+				CE95D1E025D1230200FE161C /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -321,6 +366,24 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		CE95D32625D12E0900FE161C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CE95D32A25D12E0D00FE161C /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CE95D35E25D1362B00FE161C /* xDripClientPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				CE95D35425D135D200FE161C /* xDripClientPlugin.swift */,
+				CE95D35525D135D200FE161C /* xDripClientPlugin-Bridging-Header.h */,
+				CE95D35F25D1362B00FE161C /* xDripClientPlugin.h */,
+			);
+			path = xDripClientPlugin;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -338,6 +401,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE95D35825D1362B00FE161C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE95D36125D1362B00FE161C /* xDripClientPlugin.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -349,6 +420,7 @@
 				0A9FF6F2243B78D3007A7DB3 /* Frameworks */,
 				0A9FF6F3243B78D3007A7DB3 /* Resources */,
 				0A9FF70D243B791E007A7DB3 /* Embed Frameworks */,
+				CE95D1EE25D1230500FE161C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -409,10 +481,30 @@
 			buildRules = (
 			);
 			dependencies = (
+				CE95D38525D13EC900FE161C /* PBXTargetDependency */,
 			);
 			name = xDripClientUI;
 			productName = SpikeClientUI;
 			productReference = 43A8EC82210E664300A81379 /* xDripClientUI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CE95D35C25D1362B00FE161C /* xDripClientPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE95D36225D1362B00FE161C /* Build configuration list for PBXNativeTarget "xDripClientPlugin" */;
+			buildPhases = (
+				CE95D35825D1362B00FE161C /* Headers */,
+				CE95D35925D1362B00FE161C /* Sources */,
+				CE95D35A25D1362B00FE161C /* Frameworks */,
+				CE95D35B25D1362B00FE161C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE95D38325D13EC100FE161C /* PBXTargetDependency */,
+			);
+			name = xDripClientPlugin;
+			productName = xDripClientPlugin;
+			productReference = CE95D35D25D1362B00FE161C /* xDripClientPlugin.loopplugin */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -421,7 +513,7 @@
 		432B0E7F1CDFC3C50045347B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Mark Wilson";
 				TargetAttributes = {
@@ -444,6 +536,11 @@
 					};
 					43A8EC81210E664300A81379 = {
 						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
+					CE95D35C25D1362B00FE161C = {
+						CreatedOnToolsVersion = 12.3;
+						DevelopmentTeam = HJS9L9WUYM;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -483,6 +580,7 @@
 				43A8EC81210E664300A81379 /* xDripClientUI */,
 				43A8EC75210E653B00A81379 /* Cartfile */,
 				0A9FF6F4243B78D3007A7DB3 /* TestApp */,
+				CE95D35C25D1362B00FE161C /* xDripClientPlugin */,
 			);
 		};
 /* End PBXProject section */
@@ -521,6 +619,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE95D35B25D1362B00FE161C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -536,7 +641,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -f $PROJECT_DIR/.gitmodules ]; then\n    echo \"Skipping checkout due to presence of .gitmodules file\"\n    if [ $ACTION = \"install\" ]; then\n        echo \"You're installing: Make sure to keep all submodules up-to-date and run carthage build after changes.\"\n    fi\nelse\n    echo \"Bootstrapping carthage dependencies\"\n    /usr/local/bin/carthage bootstrap --project-directory \"$SRCROOT\" --cache-builds\nfi";
+			shellScript = "if [ -f $PROJECT_DIR/.gitmodules ]; then\n    echo \"Skipping checkout due to presence of .gitmodules file\"\n    if [ $ACTION = \"install\" ]; then\n        echo \"You're installing: Make sure to keep all submodules up-to-date and run carthage build after changes.\"\n    fi\nelse\n    echo \"Bootstrapping carthage dependencies\"\n    /usr/local/bin/carthage bootstrap --project-directory \"$SRCROOT\" --cache-builds\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -587,6 +692,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE95D35925D1362B00FE161C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE95D36F25D13B3600FE161C /* xDripClientPlugin.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -604,6 +717,16 @@
 			isa = PBXTargetDependency;
 			target = 432B0E871CDFC3C50045347B /* xDripClient */;
 			targetProxy = 432B0E941CDFC3C50045347B /* PBXContainerItemProxy */;
+		};
+		CE95D38325D13EC100FE161C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43A8EC81210E664300A81379 /* xDripClientUI */;
+			targetProxy = CE95D38225D13EC100FE161C /* PBXContainerItemProxy */;
+		};
+		CE95D38525D13EC900FE161C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 432B0E871CDFC3C50045347B /* xDripClient */;
+			targetProxy = CE95D38425D13EC900FE161C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -677,6 +800,7 @@
 		0A9FF707243B78D5007A7DB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -707,6 +831,7 @@
 		0A9FF708243B78D5007A7DB3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -785,7 +910,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZED_STRING_MACRO_NAMES = (
 					NSLocalizedString,
 					CFLocalizedString,
@@ -795,6 +920,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -849,7 +975,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZED_STRING_MACRO_NAMES = (
 					NSLocalizedString,
 					CFLocalizedString,
@@ -858,6 +984,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -886,7 +1013,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.--TeamIdentifierPrefix-loopkit.xdripclient";
+				PRODUCT_BUNDLE_IDENTIFIER = com.loopkit.xdripclient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
@@ -916,7 +1043,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.--TeamIdentifierPrefix-loopkit.xdripclient";
+				PRODUCT_BUNDLE_IDENTIFIER = com.loopkit.xdripclient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
@@ -1036,6 +1163,76 @@
 			};
 			name = Release;
 		};
+		CE95D36325D1362B00FE161C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = HJS9L9WUYM;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = xDripClientPlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_DYLIB_INSTALL_NAME = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.loopkit.xDripClientPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "xDripClientPlugin/xDripClientPlugin-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = loopplugin;
+			};
+			name = Debug;
+		};
+		CE95D36425D1362B00FE161C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = xDripClientPlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_DYLIB_INSTALL_NAME = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.loopkit.xDripClientPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+				SWIFT_OBJC_BRIDGING_HEADER = "xDripClientPlugin/xDripClientPlugin-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = loopplugin;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1089,6 +1286,15 @@
 			buildConfigurations = (
 				43A8EC88210E664300A81379 /* Debug */,
 				43A8EC89210E664300A81379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE95D36225D1362B00FE161C /* Build configuration list for PBXNativeTarget "xDripClientPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE95D36325D1362B00FE161C /* Debug */,
+				CE95D36425D1362B00FE161C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
