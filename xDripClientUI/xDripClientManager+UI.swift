@@ -13,8 +13,9 @@ import xDripClient
 
 
 extension xDripClientManager: CGMManagerUI {
+    
     public static func setupViewController(glucoseTintColor: Color, guidanceColors: GuidanceColors) -> (UIViewController & CGMManagerSetupViewController & CompletionNotifying)? {
-        return nil
+        return nil  // We don't require configuration
     }
     
     public func settingsViewController(for glucoseUnit: HKUnit, glucoseTintColor: Color, guidanceColors: GuidanceColors) -> (UIViewController & CompletionNotifying) {
@@ -35,17 +36,4 @@ extension xDripClientManager: CGMManagerUI {
         return nil
     }
     
-    public static func setupViewController() -> (UIViewController & CGMManagerSetupViewController & CompletionNotifying)? {
-        return nil
-    }
-
-    public func settingsViewController(for glucoseUnit: HKUnit) -> (UIViewController & CompletionNotifying) {
-        let settings = xDripClientSettingsViewController(cgmManager: self, glucoseUnit: glucoseUnit, allowsDeletion: true)
-        let nav = SettingsNavigationViewController(rootViewController: settings)
-        return nav
-    }
-
-    public var smallImage: UIImage? {
-        return nil
-    }
 }

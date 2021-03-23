@@ -27,8 +27,6 @@ public class xDripClientManager: CGMManager {
         return CGMManagerStatus(hasValidSensorSession: true)
     }
     
-    
-    
     public func acknowledgeAlert(alertIdentifier: Alert.AlertIdentifier) {
         
     }
@@ -56,7 +54,7 @@ public class xDripClientManager: CGMManager {
     
     public var useFilter = true
 
-    required convenience public init?(rawState: CGMManager.RawStateValue) {
+    public required convenience init?(rawState: CGMManager.RawStateValue) {
         self.init()
     }
 
