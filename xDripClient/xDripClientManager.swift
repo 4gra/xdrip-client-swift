@@ -42,7 +42,7 @@ public class xDripClientManager: CGMManager {
     }
     
     
-    public static var managerIdentifier = "xDripClient"
+    public static var managerIdentifier = "xDripClientManager"
 
     public init() {
         client = xDripClient()
