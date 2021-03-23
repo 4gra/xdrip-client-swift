@@ -8,9 +8,8 @@
 
 import Foundation
 import LoopKitUI
-import CGMBLEKit
-import CGMBLEKitUI
 import xDripClient
+import xDripClientUI
 import os.log
 
 class xDripClientPlugin: NSObject, LoopUIPlugin {
@@ -22,7 +21,7 @@ class xDripClientPlugin: NSObject, LoopUIPlugin {
     }
     
     public var cgmManagerType: CGMManagerUI.Type? {
-        return xDripClientManager.self as! CGMManagerUI.Type
+        return xDripClientManager.self
     }
     
     override init() {

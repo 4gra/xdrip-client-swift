@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE95D35C25D1362B00FE161C"
-               BuildableName = "xDripClientPlugin.framework"
+               BuildableName = "xDripClientPlugin.loopplugin"
                BlueprintName = "xDripClientPlugin"
                ReferencedContainer = "container:xDripClient.xcodeproj">
             </BuildableReference>
