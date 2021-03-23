@@ -1,5 +1,5 @@
 <h1>Changes in this repo</h1>
-<p>This repo is modified to be compliance with the plugin approach available in the Loop Dev (Tidepool version). 
+<p>This repo is modified to be compliance with the plugin approach available in the Loop Dev as of Mar 2021.  The steps below are now mostly unnecessary.
 
 
 <h1>Build</h1>
