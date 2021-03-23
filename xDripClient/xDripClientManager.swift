@@ -287,4 +287,8 @@ public class xDripClientManager: CGMManager {
         }
         updateTimer.resume()
     }
+    
+    public func getSmallImage() -> UIImage? {
+        UIImage(systemName: "drop.triangle")
+    }
 }

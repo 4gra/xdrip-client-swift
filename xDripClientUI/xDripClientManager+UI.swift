@@ -23,6 +23,10 @@ extension xDripClientManager: CGMManagerUI {
         return nav
     }
     
+    public var smallImage: UIImage? {
+            self.getSmallImage()
+    }
+    
     public var cgmStatusHighlight: DeviceStatusHighlight? {
         return nil
     }
