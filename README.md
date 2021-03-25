@@ -7,7 +7,7 @@
 <p>Here are the steps we're going to take:</p>
 <ul>
   <li>Check out Loop Workspace</li>
-  <li>Add xdrip-client-swift as a submodule to the Workspace</li>
+  <li>Add xdrip-client-swift as a submodule to the Workspace (or just clone it into the folder?)</li>
   <li>Assign to your developer team, noting the App Group (something like: <code>group.com.YOUR_TEAM_ID.loopkit.LoopGroup</code>)</li>
   <li>Check out xdripswift, setting a matching developer team and App Group ID</li>
   <li>(Optional) [add the <code>xdrip://</code> URL scheme to xdripswift](https://github.com/julian-groen/xdrip-client-swift/issues/1#issuecomment-646149084) - this provides 'click through' from the reading in Loop to the xDrip interface.</li>
@@ -22,6 +22,7 @@
   <li>Make sure Loop and xDrip are using the same App Group!  Really!</li>
   <li>Make sure both Loop and xDrip are still running in the background - try killing recent apps, then killing and reopening Loop and xDrip. Make ure they have all the iOS permissions they need.</li>
 </ul>
+
 
 <h1>Older Troubleshooting steps (hopefully nobody needs these now)</h1>
 
@@ -54,7 +55,7 @@
 <p><code>$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/xDripClient.framework</code><br>
 <code>$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/xDripClientUI.framework</code></p>
 
-<h1>Link binaries (master branch only)</h1>
+<h2>Link binaries (master branch only)</h2>
 <p>We've added a reference into the CGM manager, added a reference to the frameworks, now all we have left is to link the files themselves into Loop.</p>
 <p>Under that same "Build Phases" tab you'll also see "Link Binary With Libraries". Click on that, and scroll down to the <code>+</code> button. You'll be asked to select the files. We're looking for that same <code>xDripClient.framework</code> and <code>xDripClientUI.framework</code> we just referenced in the last step.</p>
 <p>Click <code>Add other...</code> and navigate into your Loop folder. Go into Carthage &gt; Build &gt; iOS and scroll all the way down until you find the <code>xDripClient.framework</code> and the <code>xDripClientUI.framework</code>. Select the <code>.framework</code>, not the <code>.framework.dSYM</code>. We want the one whose icon kind of looks like a Lego.</p>
