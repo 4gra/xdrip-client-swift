@@ -2,7 +2,7 @@
 <p>This repo is modified to be compliance with the plugin approach available in the Loop/dev as of Mar 2021.  The steps below are now vastly simpler for Loop/dev branch than they are for Loop/master:
 
 <h1>Build</h1>
-<p>This guide will help you integrating JohanDegraeve's xDrip4iO5 aka [xdripswift](https://github.com/JohanDegraeve/xdripswift) into Loop.</p> 
+<p>This guide will help you integrating JohanDegraeve's xDrip4iO5 aka https://github.com/JohanDegraeve/xdripswift into Loop.</p> 
 
 <p>Here are the steps we're going to take:</p>
 <ul>
@@ -10,7 +10,7 @@
   <li>Add xdrip-client-swift as a submodule to the Workspace (or just clone it into the folder?)</li>
   <li>Assign to your developer team, noting the App Group (something like: <code>group.com.YOUR_TEAM_ID.loopkit.LoopGroup</code>)</li>
   <li>Check out xdripswift, setting a matching developer team and App Group ID</li>
-  <li>(Optional) [add the <code>xdrip://</code> URL scheme to xdripswift](https://github.com/julian-groen/xdrip-client-swift/issues/1#issuecomment-646149084) - this provides 'click through' from the reading in Loop to the xDrip interface.</li>
+  <li>(Optional) add the <code>xdrip://</code> [URL scheme to xdripswift](https://github.com/julian-groen/xdrip-client-swift/issues/1#issuecomment-646149084) - this provides 'click through' from the reading in Loop to the xDrip interface.</li>
   <li>Build and launch</li>
 </ul>
 
