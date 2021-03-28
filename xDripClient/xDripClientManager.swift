@@ -13,6 +13,17 @@ import Combine
 
 public class xDripClientManager: CGMManager {
     
+    public var managerIdentifier: String {
+        "xDripClientManager"
+    }
+
+    public var localizedTitle: String {
+        NSLocalizedString("nextDrip", comment: "CGM display title")
+    }
+    
+    public var isOnboarded: Bool {
+        true
+    }
     
     public var glucoseDisplay: GlucoseDisplayable? {
         if let glucose = latestBackfill {
@@ -22,7 +33,7 @@ public class xDripClientManager: CGMManager {
         
     }
     
-    public var cgmStatus: CGMManagerStatus {
+    public var cgmManagerStatus: CGMManagerStatus {
         //TODO to finalize
         return CGMManagerStatus(hasValidSensorSession: true)
     }
@@ -38,9 +49,6 @@ public class xDripClientManager: CGMManager {
     public func getSounds() -> [Alert.Sound] {
         return []
     }
-    
-    
-    public static var managerIdentifier = "xDripClientManager"
 
     public init() {
         client = xDripClient()

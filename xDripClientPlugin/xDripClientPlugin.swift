@@ -6,26 +6,20 @@
 //  Copyright © 2019 LoopKit Authors. All rights reserved.
 //
 
-import Foundation
 import LoopKitUI
 import xDripClient
 import xDripClientUI
 import os.log
 
-class xDripClientPlugin: NSObject, LoopUIPlugin {
-    
+class xDripClientPlugin: NSObject, CGMManagerUIPlugin {
     //private let log = OSLog(category: "xDripClientPlugin")
-    
-    public var pumpManagerType: PumpManagerUI.Type? {
-        return nil
-    }
     
     public var cgmManagerType: CGMManagerUI.Type? {
         return xDripClientManager.self
     }
     
     override init() {
-        super.init()
+       super.init()
        // log.default("xDripClientPlugin Instantiated")
     }
 }

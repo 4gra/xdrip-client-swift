@@ -6,6 +6,7 @@
 //
 
 import UIKit
+//import Combine
 import HealthKit
 import LoopKit
 import LoopKitUI
@@ -16,16 +17,29 @@ public class xDripClientSettingsViewController: UITableViewController {
     
     public let cgmManager: xDripClientManager
     
-    public let glucoseUnit: HKUnit
+    private let displayGlucoseUnitObservable: DisplayGlucoseUnitObservable
+
+    //private lazy var cancellables: Set AnyCancellable ()
+    
+    private var glucoseUnit: HKUnit {
+        displayGlucoseUnitObservable.displayGlucoseUnit
+    }
+    
     
     public let allowsDeletion: Bool
     
-    public init(cgmManager: xDripClientManager, glucoseUnit: HKUnit, allowsDeletion: Bool) {
+    public init(cgmManager: xDripClientManager, displayGlucoseUnitObservable: DisplayGlucoseUnitObservable, allowsDeletion: Bool) {
         self.cgmManager = cgmManager
-        self.glucoseUnit = glucoseUnit
+        self.displayGlucoseUnitObservable = displayGlucoseUnitObservable
         self.allowsDeletion = allowsDeletion
         
         super.init(style: .grouped)
+        
+        // not convinced we need this but should investigate
+        //displayGlucoseUnitObservable.$displayGlucoseUnit
+        //    .sink { [weak self] _ in self?.tableView.reloadData() }
+        //    .store(in: &cancellables)
+
     }
     
     required public init?(coder aDecoder: NSCoder) {
