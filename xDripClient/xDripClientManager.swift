@@ -13,6 +13,17 @@ import Combine
 
 public class xDripClientManager: CGMManager {
     
+    public var managerIdentifier: String {
+        "xDripClientManager"
+    }
+
+    public var localizedTitle: String {
+        NSLocalizedString("nextDrip", comment: "CGM display title")
+    }
+    
+    public var isOnboarded: Bool {
+        true
+    }
     
     public var glucoseDisplay: GlucoseDisplayable? {
         if let glucose = latestBackfill {
@@ -22,12 +33,10 @@ public class xDripClientManager: CGMManager {
         
     }
     
-    public var cgmStatus: CGMManagerStatus {
+    public var cgmManagerStatus: CGMManagerStatus {
         //TODO to finalize
         return CGMManagerStatus(hasValidSensorSession: true)
     }
-    
-    
     
     public func acknowledgeAlert(alertIdentifier: Alert.AlertIdentifier) {
         
@@ -40,9 +49,6 @@ public class xDripClientManager: CGMManager {
     public func getSounds() -> [Alert.Sound] {
         return []
     }
-    
-    
-    public static var managerIdentifier = "xDripClientManager"
 
     public init() {
         client = xDripClient()
@@ -56,7 +62,7 @@ public class xDripClientManager: CGMManager {
     
     public var useFilter = true
 
-    required convenience public init?(rawState: CGMManager.RawStateValue) {
+    public required convenience init?(rawState: CGMManager.RawStateValue) {
         self.init()
     }
 
@@ -286,5 +292,9 @@ public class xDripClientManager: CGMManager {
             }
         }
         updateTimer.resume()
+    }
+    
+    public func getSmallImage() -> UIImage? {
+        UIImage(systemName: "drop.triangle")
     }
 }
