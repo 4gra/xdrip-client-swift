@@ -12,13 +12,18 @@ import Combine
 
 
 public class xDripClientManager: CGMManager {
+    public func acknowledgeAlert(alertIdentifier: Alert.AlertIdentifier, completion: @escaping (Error?) -> Void) {
+        completion(nil)
+        
+    }
+    
     
     public var managerIdentifier: String {
         "xDripClientManager"
     }
 
     public var localizedTitle: String {
-        NSLocalizedString("nextDrip", comment: "CGM display title")
+        NSLocalizedString("xDrip4io5", comment: "CGM display title")
     }
     
     public var isOnboarded: Bool {
@@ -227,7 +232,7 @@ public class xDripClientManager: CGMManager {
                 let newGlucose = filteredGlucose.filterDateRange(startDate, nil)
                 
                 let newSamples = newGlucose.filter({ $0.isStateValid }).map {
-                    return NewGlucoseSample(date: $0.startDate, quantity: $0.quantity, isDisplayOnly: false, wasUserEntered: false, syncIdentifier: "\(Int($0.startDate.timeIntervalSince1970))", device: self.device)
+                    return NewGlucoseSample(date: $0.startDate, quantity: $0.quantity, trend: nil, isDisplayOnly: false, wasUserEntered: false, syncIdentifier: "\(Int($0.startDate.timeIntervalSince1970))", device: self.device)
                 }
                 
                 
@@ -294,7 +299,7 @@ public class xDripClientManager: CGMManager {
         updateTimer.resume()
     }
     
-    public func getSmallImage() -> UIImage? {
-        UIImage(systemName: "drop.triangle")
-    }
+//    public func getSmallImage() -> UIImage? {
+//        UIImage(systemName: "drop.triangle")
+//    }
 }
