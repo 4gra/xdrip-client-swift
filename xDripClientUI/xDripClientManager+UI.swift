@@ -21,23 +21,13 @@ extension xDripClientManager: CGMManagerUI {
         return .createdAndOnboarded(xDripClientManager())
     }
 
-    
-//    public static func setupViewController(bluetoothProvider: BluetoothProvider, colorPalette: LoopUIColorPalette) -> SetupUIResult<UIViewController & CGMManagerCreateNotifying & CGMManagerOnboardNotifying & CompletionNotifying, CGMManagerUI> {
-//        return .createdAndOnboarded(xDripClientManager())
-//    }
-    
+        
     public func settingsViewController(bluetoothProvider: BluetoothProvider, displayGlucoseUnitObservable: DisplayGlucoseUnitObservable, colorPalette: LoopUIColorPalette, allowDebugFeatures: Bool) ->CGMManagerViewController {
         let settings = xDripClientSettingsViewController(cgmManager: self, displayGlucoseUnitObservable: displayGlucoseUnitObservable, allowsDeletion: true)
         let nav = CGMManagerSettingsNavigationViewController(rootViewController: settings)
         return nav
     }
-    
-//    public func settingsViewController(for displayGlucoseUnitObservable: DisplayGlucoseUnitObservable, bluetoothProvider: BluetoothProvider, colorPalette: LoopUIColorPalette) -> (UIViewController & CGMManagerOnboardNotifying & CompletionNotifying) {
-//        let settings = xDripClientSettingsViewController(cgmManager: self, displayGlucoseUnitObservable: displayGlucoseUnitObservable, allowsDeletion: true)
-//        let nav = CGMManagerSettingsNavigationViewController(rootViewController: settings)
-//        return nav
-//    }
-    
+        
     public var cgmStatusBadge: DeviceStatusBadge? {
         nil
     }
