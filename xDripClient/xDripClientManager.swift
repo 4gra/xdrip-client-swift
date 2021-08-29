@@ -147,7 +147,8 @@ public class xDripClientManager: CGMManager {
                    
             
             // If our last glucose was less than 0.5 minutes ago, don't fetch.
-            if let latestGlucose = self.latestBackfill, latestGlucose.startDate.timeIntervalSinceNow > -TimeInterval(minutes: 0.5) {
+            // change with 4 minute ago
+            if let latestGlucose = self.latestBackfill, latestGlucose.startDate.timeIntervalSinceNow > -TimeInterval(minutes: 4) {
                 self.delegateQueue.async {
                     completion(.noData)
                 }
